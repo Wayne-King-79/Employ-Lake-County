@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.angular-container {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/*** NAVBAR *****/
+nav {
+    background-color: #5BBC2E !important;
+    border: none !important;
+}
+.navbar-nav {
+
+}
+
+.navbar-toggle {
+    background-color: #5BBC2E !important;
+    border: 3px solid #fff;
+}
+
+.icon-bar {
+    background-color: #fff !important;
+}
+
+.navbar-default a {
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 100 !important;
+}
+
+.navbar-default a:hover {
+    background-color: #444 !important;
+    color: #5BBC2E !important;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+/*** MAIN CONTENT *****/
+.intro {
+    background: url("../img/office.jpg") no-repeat center;
+    background-size: cover !important;
+    /*
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(../img/office.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../img/office.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    */
+    height: 100vh;
+}
+
+.intro-text {
+    margin-top: 20%;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    border-radius: 20px;
+}
+
+.intro-text:hover {
+    color: #5BBC2E;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+.intro-text a {
+    color: #5BBC2E;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+/******* JOB CONTAINER ********/
+.job-container {
+    background-color: #D8D8D8;
+}
+
+.main-content {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.jp {
+    padding: 20px;
+    background-color: #fff;
+    color: #555;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px #555;
+}
+
+table {
+    font-size: 16px;
+}
+
+/****** CONTACT ******/
+.contact {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.contact-content {
+    margin-top: 17%;
+    margin-bottom: 10%;
+}
+
+.fa-envelope {
+    color: #5BBC2E;
+}
+
+.contact .btn-primary {
+    background-color: #5BBC2E !important;
+    border-color: #5BBC2E !important;
+    color: #fff !important;
+}
+
+/*** FOOTER *****/
+footer {
+    background-color: #444444;
+    color: #5BBC2E;
+    height: 25vh;
+}
+
+.footer-section {
+    margin-top: 50px;
+}
+
+
+/****** MOBILE FIRST ********/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .intro {
+        height: 105vh;
+    }
+    footer {
+        height: 25vh;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .intro {
+        height: 100vh;
+    }
+    footer {
+        font-size: 20px;
+        height: 15vh;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

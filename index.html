@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="lcfjApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>LCFJobs</title>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        alert("This website is powered by modern technologies, please update your browser to view this web page correctly.");
+    </script>
+    <![endif]-->
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavController">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true"
+                    ng-click="navCollapsed = !navCollapsed" data-toggle="collapse" data-target="#myNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LCFJOBS</a>
+        </div>
+        <div class="collapse navbar-collapse" ng-class="{'in':!navCollapsed}" id="myNavBar">
+            <ul class="nav navbar-nav navbar-right" ng-repeat="link in navLinks">
+                <li><a ng-href="#{{ link | lowercase }}">{{ link | uppercase}}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid angular-container" ng-view>
+
+</div>
+
+<footer ng-controller="FooterController">
+    <div class="container-fluid text-center" id="footer">
+        <div class="row footer-section">
+            <div class="col-xs-0">
+
+            </div>
+            <div class="col-xs-12">
+                <p>&copy;{{ copyRight }}</p>
+            </div>
+            <div class="col-xs-0">
+
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/angular/angular.min.js"></script>
+<script type="text/javascript" src="js/angular/ui-bootstrap-tpls-2.2.0.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/routes/lcfjRoutes.js"></script>
+<script type="text/javascript" src="js/controllers/JobController.js"></script>
+<script type="text/javascript" src="js/controllers/NavController.js"></script>
+<script type="text/javascript" src="js/controllers/FooterController.js"></script>
+</body>
+</html>
