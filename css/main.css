@@ -9,6 +9,10 @@ body {
     margin: 0 !important;
 }
 
+[ng\:cloak],[ng-cloak],.ng-cloak {
+    display: none !important;
+}
+
 /*** NAVBAR *****/
 nav {
     background-color: #5BBC2E !important;
