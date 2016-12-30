@@ -13,6 +13,14 @@ body {
     display: none !important;
 }
 
+.unsp-div {
+    margin-top: 20%;
+}
+
+.unsp-div p {
+    font-size: 25px;
+}
+
 /*** NAVBAR *****/
 nav {
     background-color: #5BBC2E !important;
