@@ -11,7 +11,7 @@
 
     <!--[if lt IE 9]>
     <script type="text/javascript">
-        alert("This website is powered by modern technologies, please update your browser to view this web page correctly.");
+        window.open("http://www.test.lcfjobs.com/js/views/unsupported.html");
     </script>
     <![endif]-->
 
@@ -36,7 +36,19 @@
     </div>
 </nav>
 <div class="container-fluid angular-container" ng-view>
+    <noscript>
+        <div class="row">
+            <div class="col-xs-0">
 
+            </div>
+            <div class="col-xs-12 text-center">
+                <p>You must have javascript enabled to view this site properly.</p>
+            </div>
+            <div class="col-xs-0">
+
+            </div>
+        </div>
+    </noscript>
 </div>
 
 <footer ng-cloak ng-controller="FooterController">
