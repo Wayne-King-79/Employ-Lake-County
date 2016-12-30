@@ -107,11 +107,11 @@ table {
 /****** CONTACT ******/
 .contact {
     background-color: #fff;
-    height: 100vh;
+    height: 85vh;
 }
 
 .contact-content {
-    margin-top: 17%;
+    margin-top: 10%;
     margin-bottom: 10%;
 }
 
@@ -145,7 +145,10 @@ footer {
         height: 105vh;
     }
     footer {
-        height: 25vh;
+        height: 15vh;
+    }
+    .contact-content {
+        margin-top: 20%;
     }
 }
 
@@ -167,7 +170,9 @@ footer {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-
+    .contact-content {
+        margin-top: 10%;
+    }
 }
 
 /* Large Devices, Wide Screens */
