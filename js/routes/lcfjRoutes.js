@@ -5,19 +5,22 @@
 app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl : "js/views/home-view.html"
+            templateUrl : "view/home-view.html"
         })
         .when("/jobs", {
-            templateUrl : "js/views/jobs-view.html"
+            templateUrl : "view/jobs-view.html"
         })
         .when("/contact", {
-            templateUrl : "js/views/contact-view.html"
+            templateUrl : "view/contact-view.html"
         })
         .when("/resources", {
-            templateUrl : "js/views/resources.html"
+            templateUrl : "view/resources.html"
+        })
+        .when("/donate", {
+            templateUrl: "view/donate.html"
         })
         .otherwise({
-            templateUrl : "js/views/home-view.html"
+            templateUrl : "view/home-view.html"
         })
 });
 

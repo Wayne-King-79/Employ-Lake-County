@@ -1171,23 +1171,23 @@ var csp = function() {
  * others ignored.
  *
  * @example
- * This example shows how to force jqLite using the `ngJq` directive to the `html` tag.
- ```html
- <!doctype html>
- <html ng-app ng-jq>
+ * This example shows how to force jqLite using the `ngJq` directive to the `view` tag.
+ ```view
+ <!doctype view>
+ <view ng-app ng-jq>
  ...
  ...
- </html>
+ </view>
  ```
  * @example
  * This example shows how to use a jQuery based library of a different name.
  * The library name must be available at the top most 'window'.
- ```html
- <!doctype html>
- <html ng-app ng-jq="jQueryLib">
+ ```view
+ <!doctype view>
+ <view ng-app ng-jq="jQueryLib">
  ...
  ...
- </html>
+ </view>
  ```
  */
 var jq = function() {
@@ -1365,7 +1365,7 @@ function convertTimezoneToLocal(date, timezone, reverse) {
 function startingTag(element) {
   element = jqLite(element).clone();
   try {
-    // turns out IE does not let you set .html() on elements which
+    // turns out IE does not let you set .view() on elements which
     // are not allowed to have children. So we just ignore it.
     element.empty();
   } catch (e) {}
@@ -1691,9 +1691,9 @@ function angularInit(element, bootstrap) {
  * causing animations to stop working and making the injector inaccessible from outside the app.
  * </div>
  *
- * ```html
- * <!doctype html>
- * <html>
+ * ```view
+ * <!doctype view>
+ * <view>
  * <body>
  * <div ng-controller="WelcomeController">
  *   {{greeting}}
@@ -1708,7 +1708,7 @@ function angularInit(element, bootstrap) {
  *   angular.bootstrap(document, ['demo']);
  * </script>
  * </body>
- * </html>
+ * </view>
  * ```
  *
  * @param {DOMElement} element DOM element which is the root of angular application.
@@ -2736,7 +2736,7 @@ function publishExternalAPI(angular) {
  * - [`eq()`](http://api.jquery.com/eq/)
  * - [`find()`](http://api.jquery.com/find/) - Limited to lookups by tag name
  * - [`hasClass()`](http://api.jquery.com/hasClass/)
- * - [`html()`](http://api.jquery.com/html/)
+ * - [`view()`](http://api.jquery.com/html/)
  * - [`next()`](http://api.jquery.com/next/) - Does not support selectors
  * - [`on()`](http://api.jquery.com/on/) - Does not support namespaces, selectors or eventData
  * - [`off()`](http://api.jquery.com/off/) - Does not support namespaces, selectors or event object as parameter
@@ -2878,10 +2878,10 @@ function jqLiteBuildFragment(html, context) {
       nodes = [], i;
 
   if (jqLiteIsTextNode(html)) {
-    // Convert non-html into a text node
+    // Convert non-view into a text node
     nodes.push(context.createTextNode(html));
   } else {
-    // Convert html into DOM nodes
+    // Convert view into DOM nodes
     tmp = fragment.appendChild(context.createElement("div"));
     tag = (TAG_NAME_REGEXP.exec(html) || ["", ""])[1].toLowerCase();
     wrap = wrapMap[tag] || wrapMap._default;
@@ -3148,7 +3148,7 @@ function jqLiteController(element, name) {
 }
 
 function jqLiteInheritedData(element, name, value) {
-  // if element is the document object work with the html element instead
+  // if element is the document object work with the view element instead
   // this makes $(document).scope() possible
   if (element.nodeType == NODE_TYPE_DOCUMENT) {
     element = element.documentElement;
@@ -6640,8 +6640,8 @@ function $CacheFactoryProvider() {
  *
  * Adding via the `script` tag:
  *
- * ```html
- *   <script type="text/ng-template" id="templateId.html">
+ * ```view
+ *   <script type="text/ng-template" id="templateId.view">
  *     <p>This is the content of the template</p>
  *   </script>
  * ```
@@ -6655,18 +6655,18 @@ function $CacheFactoryProvider() {
  * ```js
  * var myApp = angular.module('myApp', []);
  * myApp.run(function($templateCache) {
- *   $templateCache.put('templateId.html', 'This is the content of the template');
+ *   $templateCache.put('templateId.view', 'This is the content of the template');
  * });
  * ```
  *
  * To retrieve the template later, simply use it in your HTML:
- * ```html
- * <div ng-include=" 'templateId.html' "></div>
+ * ```view
+ * <div ng-include=" 'templateId.view' "></div>
  * ```
  *
  * or get it via Javascript:
  * ```js
- * $templateCache.get('templateId.html')
+ * $templateCache.get('templateId.view')
  * ```
  *
  * See {@link ng.$cacheFactory $cacheFactory}.
@@ -7817,8 +7817,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    *    - `controllerAs` – `{string=}` – identifier name for to reference the controller in the component's scope.
    *      If present, the controller will be published to scope under the `controllerAs` name.
    *      If not present, this will default to be `$ctrl`.
-   *    - `template` – `{string=|function()=}` – html template as a string or a function that
-   *      returns an html template as a string which should be used as the contents of this component.
+   *    - `template` – `{string=|function()=}` – view template as a string or a function that
+   *      returns an view template as a string which should be used as the contents of this component.
    *      Empty string by default.
    *
    *      If `template` is a function, then it is {@link auto.$injector#invoke injected} with
@@ -7827,7 +7827,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    *      - `$element` - Current element
    *      - `$attrs` - Current attributes object for the element
    *
-   *    - `templateUrl` – `{string=|function()=}` – path or function that returns a path to an html
+   *    - `templateUrl` – `{string=|function()=}` – path or function that returns a path to an view
    *      template that should be used  as the contents of this component.
    *
    *      If `templateUrl` is a function, then it is {@link auto.$injector#invoke injected} with
@@ -7876,7 +7876,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    *   });
    *
    *   myMod.component('myComp', {
-   *     templateUrl: 'views/my-comp.html',
+   *     templateUrl: 'views/my-comp.view',
    *     controller: 'MyCtrl',
    *     controllerAs: 'ctrl',
    *     bindings: {name: '@'}
@@ -7953,7 +7953,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    * Retrieves or overrides the default regular expression that is used for whitelisting of safe
    * urls during a[href] sanitization.
    *
-   * The sanitization is a security measure aimed at preventing XSS attacks via html links.
+   * The sanitization is a security measure aimed at preventing XSS attacks via view links.
    *
    * Any url about to be assigned to a[href] via data-binding is first normalized and turned into
    * an absolute url. Afterwards, the url is matched against the `aHrefSanitizationWhitelist`
@@ -7983,7 +7983,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    * Retrieves or overrides the default regular expression that is used for whitelisting of safe
    * urls during img[src] sanitization.
    *
-   * The sanitization is a security measure aimed at prevent XSS attacks via html links.
+   * The sanitization is a security measure aimed at prevent XSS attacks via view links.
    *
    * Any url about to be assigned to img[src] via data-binding is first normalized and turned into
    * an absolute url. Afterwards, the url is matched against the `imgSrcSanitizationWhitelist`
@@ -18120,7 +18120,7 @@ function $$SanitizeUriProvider() {
    * Retrieves or overrides the default regular expression that is used for whitelisting of safe
    * urls during a[href] sanitization.
    *
-   * The sanitization is a security measure aimed at prevent XSS attacks via html links.
+   * The sanitization is a security measure aimed at prevent XSS attacks via view links.
    *
    * Any url about to be assigned to a[href] via data-binding is first normalized and turned into
    * an absolute url. Afterwards, the url is matched against the `aHrefSanitizationWhitelist`
@@ -18145,7 +18145,7 @@ function $$SanitizeUriProvider() {
    * Retrieves or overrides the default regular expression that is used for whitelisting of safe
    * urls during img[src] sanitization.
    *
-   * The sanitization is a security measure aimed at prevent XSS attacks via html links.
+   * The sanitization is a security measure aimed at prevent XSS attacks via view links.
    *
    * Any url about to be assigned to img[src] via data-binding is first normalized and turned into
    * an absolute url. Afterwards, the url is matched against the `imgSrcSanitizationWhitelist`
@@ -18455,13 +18455,13 @@ function $SceDelegateProvider() {
      *
      * @description
      * Returns an object that is trusted by angular for use in specified strict
-     * contextual escaping contexts (such as ng-bind-html, ng-include, any src
+     * contextual escaping contexts (such as ng-bind-view, ng-include, any src
      * attribute interpolation, any dom event binding attribute interpolation
      * such as for onclick,  etc.) that uses the provided value.
      * See {@link ng.$sce $sce} for enabling strict contextual escaping.
      *
      * @param {string} type The kind of context in which this value is safe for use.  e.g. url,
-     *   resourceUrl, html, js and css.
+     *   resourceUrl, view, js and css.
      * @param {*} value The value that that should be considered trusted/safe.
      * @returns {*} A value that can be used to stand in for the provided `value` in places
      * where Angular expects a $sce.trustAs() return value.
@@ -18920,7 +18920,7 @@ function $SceProvider() {
     if (enabled && msie < 8) {
       throw $sceMinErr('iequirks',
         'Strict Contextual Escaping does not support Internet Explorer version < 11 in quirks ' +
-        'mode.  You can fix this by adding the text <!doctype html> to the top of your HTML ' +
+        'mode.  You can fix this by adding the text <!doctype view> to the top of your HTML ' +
         'document.  See http://docs.angularjs.org/api/ng.$sce for more information.');
     }
 
@@ -18986,13 +18986,13 @@ function $SceProvider() {
      * @description
      * Delegates to {@link ng.$sceDelegate#trustAs `$sceDelegate.trustAs`}.  As such,
      * returns an object that is trusted by angular for use in specified strict contextual
-     * escaping contexts (such as ng-bind-html, ng-include, any src attribute
+     * escaping contexts (such as ng-bind-view, ng-include, any src attribute
      * interpolation, any dom event binding attribute interpolation such as for onclick,  etc.)
      * that uses the provided value.  See * {@link ng.$sce $sce} for enabling strict contextual
      * escaping.
      *
      * @param {string} type The kind of context in which this value is safe for use.  e.g. url,
-     *   resourceUrl, html, js and css.
+     *   resourceUrl, view, js and css.
      * @param {*} value The value that that should be considered trusted/safe.
      * @returns {*} A value that can be used to stand in for the provided `value` in places
      * where Angular expects a $sce.trustAs() return value.
@@ -21823,7 +21823,7 @@ function ngDirective(directive) {
  * @restrict E
  *
  * @description
- * Modifies the default behavior of the html A tag so that the default action is prevented when
+ * Modifies the default behavior of the view A tag so that the default action is prevented when
  * the href attribute is empty.
  *
  * This change permits the easy creation of action links with the `ngClick` directive
@@ -21964,12 +21964,12 @@ var htmlAnchorDirective = valueFn({
  * `{{hash}}`. The `ngSrc` directive solves this problem.
  *
  * The buggy way to write it:
- * ```html
+ * ```view
  * <img src="http://www.gravatar.com/avatar/{{hash}}" alt="Description"/>
  * ```
  *
  * The correct way to write it:
- * ```html
+ * ```view
  * <img ng-src="http://www.gravatar.com/avatar/{{hash}}" alt="Description" />
  * ```
  *
@@ -21990,12 +21990,12 @@ var htmlAnchorDirective = valueFn({
  * `{{hash}}`. The `ngSrcset` directive solves this problem.
  *
  * The buggy way to write it:
- * ```html
+ * ```view
  * <img srcset="http://www.gravatar.com/avatar/{{hash}} 2x" alt="Description"/>
  * ```
  *
  * The correct way to write it:
- * ```html
+ * ```view
  * <img ng-srcset="http://www.gravatar.com/avatar/{{hash}} 2x" alt="Description" />
  * ```
  *
@@ -24810,7 +24810,7 @@ var ngBindTemplateDirective = ['$interpolate', '$compile', function($interpolate
      </file>
 
      <file name="protractor.js" type="protractor">
-       it('should check ng-bind-html', function() {
+       it(view, function() {
          expect(element(by.binding('myHTML')).getText()).toBe(
              'I am an HTMLstring with links! and other stuff');
        });
@@ -26672,7 +26672,7 @@ var ngIncludeDirective = ['$templateRequest', '$anchorScroll', '$animate',
               ctrl.template = response;
 
               // Note: This will also link all children of ng-include that were contained in the original
-              // html. If that content contains controllers, ... they could pollute/change the scope.
+              // html. If that content cviewins controllers, ... they could pollute/change the scope.
               // However, using ng-include on an element with additional content does not make sense...
               // Note: We can't remove them in the cloneAttchFn of $transclude as that
               // function is called before linking the content, which would apply child

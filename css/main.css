@@ -122,11 +122,6 @@ table {
     height: 85vh;
 }
 
-.contact-content {
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
 .fa-envelope {
     color: #5BBC2E;
 }
@@ -135,6 +130,34 @@ table {
     background-color: #5BBC2E !important;
     border-color: #5BBC2E !important;
     color: #fff !important;
+}
+
+.resources {
+    height: 85vh;
+}
+
+.donate {
+    height: 85vh;
+}
+
+.donate p {
+    font-size: 20px;
+    color: #555;
+}
+
+.pp-btn {
+    background-color: #5BBC2E;
+    padding: 30px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 25px;
+}
+
+.pp-btn:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: #5BBC2E;
+    border: 3px solid #5BBC2E;
 }
 
 /*** FOOTER *****/
@@ -159,7 +182,7 @@ footer {
     footer {
         height: 25vh;
     }
-    .contact-content {
+    .main-content {
         margin-top: 20%;
     }
 }
@@ -182,7 +205,7 @@ footer {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-    .contact-content {
+    .main-content {
         margin-top: 10%;
     }
 }
