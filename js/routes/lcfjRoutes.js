@@ -13,6 +13,9 @@ app.config(function($routeProvider) {
         .when("/contact", {
             templateUrl : "js/views/contact-view.html"
         })
+        .when("/resources", {
+            templateUrl : "js/views/resources.html"
+        })
         .otherwise({
             templateUrl : "js/views/home-view.html"
         })
