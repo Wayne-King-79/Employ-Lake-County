@@ -99,6 +99,7 @@ nav {
 /******* JOB CONTAINER ********/
 .job-container {
     background-color: #D8D8D8;
+    height: 85vh;
 }
 
 .main-content {
@@ -106,7 +107,7 @@ nav {
     margin-bottom: 200px;
 }
 
-.jp {
+.jp, .rp {
     padding: 20px;
     background-color: #fff;
     color: #555;
@@ -136,11 +137,29 @@ table {
 
 /******** RESOURCES ********/
 .resources {
-    height: 85vh;
+    /*height: 85vh;*/
+    background-color: #D8D8D8;
+    color: #444;
 }
 
 .rp {
     word-break: break-all;
+    background-color: #444;
+}
+
+.rp {
+    color: #fff;
+}
+
+.rp:hover {
+    background-color: #fff;
+    color: #444;
+    transition: background-color 0.7s, color 0.7s;
+}
+
+.rp a {
+    text-decoration: none;
+    color: #5BBC2E;
 }
 
 /******* DONATE *******/
@@ -206,7 +225,9 @@ footer {
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-
+    .rp {
+        font-size: 20px;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -232,5 +253,7 @@ footer {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-
+    .resources {
+        /*height: 90vh;*/
+    }
 }

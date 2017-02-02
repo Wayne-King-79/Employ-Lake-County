@@ -9,6 +9,10 @@ app.controller('ResourcesController', function($scope) {
             address : "https://www.lakecountyfl.gov/departments/community_services/health_and_human_services/veterans_services/contacts.aspx"
         },
         {
+            description : "Lake County Fl Jobs (Facebook Page)",
+            address : "https://www.facebook.com/groups/676874252353916/"
+        },
+        {
             description: "Career Source Central Florida",
             address: "http://careersourcecentralflorida.com/"
         },
@@ -43,6 +47,10 @@ app.controller('ResourcesController', function($scope) {
         {
             description: "City of Fruitland Park Jobs site",
             address : "http://www.fruitlandpark.org/employment.html"
+        },
+        {
+            description : "Town of Lady Lake Jobs site",
+            address : "http://ladylake.org/jobs"
         }
 
         ];
