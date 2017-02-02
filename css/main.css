@@ -139,6 +139,10 @@ table {
     height: 85vh;
 }
 
+.rp {
+    word-break: break-all;
+}
+
 /******* DONATE *******/
 .donate {
     height: 85vh;
@@ -172,7 +176,7 @@ table {
 
 /*** FOOTER *****/
 footer {
-    background-color: #444444;
+    background-color: #444;
     color: #5BBC2E;
     height: 25vh;
 }
