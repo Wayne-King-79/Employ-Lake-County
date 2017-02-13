@@ -1,3 +1,3 @@
 app.controller('NavController', function($scope) {
-    $scope.navLinks = ['Donate', 'Resources', 'Contact', 'Jobs', 'Home'];
+    $scope.navLinks = ['Home', 'Jobs', 'Contact', 'Resources', 'Donate'];
 });

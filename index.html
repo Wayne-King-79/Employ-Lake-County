@@ -29,8 +29,8 @@
             <!-- <a class="navbar-brand" href="#/">LCFJOBS</a> -->
         </div>
         <div id="navBar" class="collapse navbar-collapse" ng-click="navCollapsed = !navCollapsed" collapse="isCollapsed" ng-class="{'in':!navCollapsed}">
-            <ul class="nav navbar-nav navbar-right" ng-repeat="link in navLinks">
-                <li><a class="nav-bar-link" ng-href="#{{ link | lowercase }}">{{ link | uppercase}}</a></li>
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-repeat="link in navLinks"><a class="nav-bar-link" ng-href="#{{ link | lowercase }}">{{ link | uppercase}}</a></li>
             </ul>
         </div>
     </div>
