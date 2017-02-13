@@ -1,2 +1,2 @@
 ## About LCFJobs
-LCFJobs is a free jobs website for the Lake County Florida community. 
+Formerly known as LCFJobs, EmployLakeCounty.org is a free jobs website for the Lake County Florida community that offers other resources besides only jobs. 
