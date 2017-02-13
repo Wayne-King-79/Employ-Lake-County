@@ -1,5 +1,5 @@
 app.controller('JobController', function ($scope, $http) {
-    $http.get("http://www.test.lcfjobs.com/db/jobs.php")
+    $http.get("http://employlakecounty.org/db/jobs.php")
         .then(function (response) {
             $scope.jobs = response.data.records;
 
