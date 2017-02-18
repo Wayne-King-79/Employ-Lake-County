@@ -23,7 +23,7 @@ body {
 
 /*** NAVBAR *****/
 nav {
-    background-color: #5BBC2E !important;
+    background-color: #333 !important;
     border: none !important;
 }
 .navbar-brand {
@@ -31,30 +31,29 @@ nav {
 }
 
 .navbar-toggle {
-    background-color: #5BBC2E !important;
-    border: 3px solid #555 !important;
+    background-color: #3d3d3d !important;
+    border: 1px solid #3d3d3d !important;
 }
 
 .icon-bar {
-    background-color: #555 !important;
+    background-color: #fff !important;
 }
 
 .navbar-default a {
-    color: #fff !important;
-    /*font-size: 20px;*/
+    color: #5bbc2e !important;
     font-weight: 100 !important;
-    border: 2px solid #5BBC2E;
+    border: 2px solid #333;
 }
 
 .navbar-default a:hover {
     background-color: #444 !important;
-    color: #5BBC2E !important;
+    color: #fff !important;
+    border: 2px solid #444;
     -webkit-transition: background-color 1s, border 1s;
     -moz-transition: background-color 1s, border 1s;
     -ms-transition: background-color 1s, border 1s;
     -o-transition: background-color 1s, border 1s;
     transition: background-color 1s, border 1s;
-    border: 2px solid #444;
 }
 
 /*** MAIN CONTENT *****/
@@ -76,6 +75,7 @@ nav {
     background-color: rgba(0,0,0,0.6);
     color: #fff;
     border-radius: 20px;
+    padding: 25px;
 }
 
 .intro-text:hover {
@@ -195,8 +195,8 @@ table {
 
 /*** FOOTER *****/
 footer {
-    background-color: #444;
-    color: #5BBC2E;
+    background-color: #333;
+    color: #fff;
     height: 25vh;
 }
 
