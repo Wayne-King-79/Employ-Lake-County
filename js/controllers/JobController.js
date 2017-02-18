@@ -2,6 +2,11 @@ app.controller('JobController', function ($scope, $http) {
     $http.get("http://employlakecounty.org/db/jobs.php")
         .then(function (response) {
             $scope.jobs = response.data.records;
+            $scope.numOfJobs = 0;
+
+            angular.forEach($scope.jobs, function() {
+               $scope.numOfJobs++;
+            });
 
             //console.log($scope.jobs.length);
             // Below code is for uib pagination
