@@ -16,7 +16,7 @@ app.config(function($routeProvider) {
         .when("/resources", {
             templateUrl : "view/resources.html"
         })
-        .when("/donate", {
+        .when("/support", {
             templateUrl: "view/donate.html"
         })
         .otherwise({
