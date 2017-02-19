@@ -139,7 +139,8 @@ table {
 }
 
 .fa-envelope {
-    color: #5BBC2E;
+    color: #333;
+    opacity: 0.1;
 }
 
 .contact .btn-primary {
