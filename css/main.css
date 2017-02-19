@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
+    background-color: #d8d8d8;
 }
 
 .angular-container {
@@ -125,7 +126,7 @@ table {
 /****** CONTACT ******/
 .contact {
     background-color: #d8d8d8;
-    height: 85vh;
+    margin-bottom: 150px;
 }
 
 .fa-envelope {
