@@ -21,6 +21,10 @@ body {
     font-size: 25px;
 }
 
+.bold {
+    color: #5bbc2e;
+}
+
 /*** NAVBAR *****/
 nav {
     background-color: #333 !important;
@@ -106,10 +110,10 @@ nav {
     margin-bottom: 200px;
 }
 
-.jp, .rp {
+.jp {
     padding: 20px;
     background-color: #fff;
-    color: #555;
+    color: #333;
     margin-top: 50px;
     box-shadow: 10px 10px 10px #555;
 }
@@ -120,7 +124,7 @@ table {
 
 /****** CONTACT ******/
 .contact {
-    background-color: #fff;
+    background-color: #d8d8d8;
     height: 85vh;
 }
 
@@ -143,26 +147,25 @@ table {
 
 .rp {
     word-break: break-all;
-    background-color: #444;
-}
-
-.rp {
+    background-color: #333;
     color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px #555;
 }
 
 .rp:hover {
-    background-color: #fff;
-    color: #444;
-    transition: background-color 0.7s, color 0.7s;
+
 }
 
 .rp a {
     text-decoration: none;
-    color: #5BBC2E;
+    color: #5bbc2e;
 }
 
-/******* DONATE *******/
+/******* SUPPORT *******/
 .donate {
+    background-color: #d8d8d8;
     height: 85vh;
 }
 
