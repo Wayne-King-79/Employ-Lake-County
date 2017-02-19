@@ -111,12 +111,21 @@ nav {
     margin-bottom: 200px;
 }
 
+.jinfo {
+    font-size: 25px;
+    color: #555;
+}
+
 .jp {
     padding: 20px;
     background-color: #fff;
     color: #333;
     margin-top: 50px;
     box-shadow: 10px 10px 10px #555;
+}
+
+.fa-database {
+    float: right;
 }
 
 table {
