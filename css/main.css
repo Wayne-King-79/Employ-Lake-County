@@ -128,6 +128,24 @@ nav {
     float: right;
 }
 
+.pagination>li>a{
+    color: #5bbc2e;
+}
+
+.pagination>li>a:hover {
+    color: #5bbc2e;
+}
+
+.pagination>.active>a {
+    background-color: #5bbc2e;
+    color: #fff;
+    border-color: #5bbc2e;
+}
+
+.pagination>.disabled>a {
+    color: #5bbc2e;
+}
+
 table {
     font-size: 16px;
 }
