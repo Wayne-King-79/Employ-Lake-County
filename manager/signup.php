@@ -11,27 +11,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = cleanInput($_POST["password"]);
 
     if(empty($firstname)) {
-        header('Location: http://manager.employlakecounty.org/error.html');
+        header('Location: http://employlakecounty.org/manager/error.html');
     }
 
     if(empty($lastname)) {
-        header('Location: http://manager.employlakecounty.org/error.html');
+        header('Location: http://employlakecounty.org/manager/error.html');
     }
 
     if(empty($companyname)) {
-        header('Location: http://manager.employlakecounty.org/error.html');
+        header('Location: http://employlakecounty.org/manager/error.html');
     }
 
     if(empty($worktitle)) {
-        header('Location: http://manager.employlakecounty.org/error.html');
+        header('Location: http://employlakecounty.org/manager/error.html');
     }
 
     if(empty($emailaddress)) {
-        header('Location: http://manager.employlakecounty.org/error.html');
+        header('Location: http://employlakecounty.org/manager/error.html');
     }
 
     if(empty($password)) {
-        header('Location: http://manager.employlakecounty.org/error.html');
+        header('Location: http://employlakecounty.org/manager/error.html');
     }
 }
 
