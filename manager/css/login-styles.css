@@ -1,0 +1,41 @@
+body {
+    background-color: #333;
+}
+
+form {
+    margin-top: 15%;
+}
+
+h2 {
+    color: #fff;
+}
+
+a {
+    color: #5bbc2e;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #5bbc2e;
+    border-color: #5bbc2e;
+}
+
+.form-signup input {
+    margin-top: 10px;
+}
+
+.err-text {
+    color: red;
+    font-weight: 200;
+    visibility: hidden;
+}
+
+.error-page-paragraph {
+    margin-top: 15%;
+    color: #fff;
+    font-size: 20px;
+}
