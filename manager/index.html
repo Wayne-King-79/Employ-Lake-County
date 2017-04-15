@@ -6,7 +6,7 @@
         <title>Manager Login</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="http://employlakecounty.org/manager/css/login-styles.css">
+        <link rel="stylesheet" href="http://manager.employlakecounty.org/css/login-styles.css">
     </head>
     <body>
         <div class="container-fluid">
@@ -18,16 +18,20 @@
                         <h2 class="form-signin-heading">Please Log In</h2>
                         <label for="inputEmail" class="sr-only">Email address</label>
                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                        <span class="err-text" id="login-email-error-text">Email field cannot be blank</span>
+
                         <label for="inputPassword" class="sr-only">Password</label>
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <span class="err-text" id="login-password-error-text">Password field cannot be blank</span>
                         <div class="checkbox">
-                            <a href="http://employlakecounty.org/manager/signup.html">Need an account?  Click here to sign up!</a>
+                            <a href="http://manager.employlakecounty.org/signup.html">Need an account?  Click here to sign up!</a>
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block disabled" type="submit">Sign in</button>
+                        <input class="btn btn-lg btn-primary btn-block disabled" type="submit" id="login-button" value="Sign In" />
                     </form>
                 </div>
                 <div class="col-xs-0 col-md-4"></div>
             </div>
         </div>
+        <script src="http://manager.employlakecounty.org/manager-js/login-verification.js"></script>
     </body>
 </html>
