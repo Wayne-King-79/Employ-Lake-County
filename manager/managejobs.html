@@ -85,7 +85,7 @@
             <p class="dont-show-big">
                 We apologize for the inconvenience but you cannot enter a job on a mobile device. This is to make sure entries are accurate and to help ensure security for the site.
             </p>
-            <form class="dont-show-small" action="" method="post">
+            <form class="dont-show-small" action="/db/add-job.php" method="post">
                 <div class="form-group">
                     <label for="companyName">Company Name <span class="req">*</span></label>
                     <input class="form-control" type="text" id="companyName" required>
@@ -116,7 +116,7 @@
                     <textarea class="form-control" type="text" id="jobDescription" rows="15" required></textarea>
                     <span class="error-text" id="jobDescriptionError">Job Description is not long enough</span>
                 </div>
-                <button type="button" onclick="checkJobForm()" id="submitButton" class="btn btn-default disabled">Submit</button>
+                <button type="submit" id="submitButton" class="btn btn-default disabled">Submit</button>
             </form>
         </div>
         <div class="col-md-4">
@@ -154,9 +154,6 @@
         } else {
             document.getElementById('submitButton').classList.add('disabled');
         }
-    }
-    function submitJob() {
-        window.loca
     }
 
     document.addEventListener('DOMContentLoaded', function() {
