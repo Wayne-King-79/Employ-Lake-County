@@ -8,7 +8,7 @@ if( !$conn ) {
     die('Could not connect to database' . mysqli_error());
 }
 
-$result = $conn->query("SELECT * FROM jobs ORDER BY id DESC");
+$result = $conn->query("SELECT * FROM newjobs WHERE is_approved = 1 ORDER BY id DESC");
 $output = "";
 
 while( $rs = $result->fetch_array(MYSQLI_ASSOC) ) {
