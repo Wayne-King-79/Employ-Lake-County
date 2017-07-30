@@ -103,13 +103,15 @@
             <div class="row">
                 <i class="fa fa-file"></i>
                 <h1 class="text-center">Lake County Employment Resources</h1>
-                <div class="col-xs-12 col-md-6 col-lg-4" ng-repeat="res in resLinks">
-                    <div class="resources-div" ng-mouseover="open = true" ng-mouseout="open = false">
-                        <p class="rp">
-                            {{ res.description }}
-                        </p>
-                        <a href="{{ res.address }}" class="res-link" ng-show="open" target="_blank">{{ res.address }}</a>
-                    </div>
+                <div class="col-xs-12 col-md-6 col-lg-4 res-container" ng-repeat="res in resLinks">
+                    <a href="{{ res.address }}" class="res-link" target="_blank">
+                        <div class="resources-div">
+                            <p class="rp">
+                                {{ res.description }}
+                            </p>
+                            <!--<a href="{{ res.address }}" class="res-link" ng-show="open" target="_blank">{{ res.address }}</a>-->
+                        </div>
+                    </a>
                 </div>
             </div>
             
@@ -190,7 +192,7 @@
 
             </div>
             <div class="col-xs-12">
-                <p>&copy;{{ copyRight }}&reg;</p>
+                <p>&copy;{{ copyRight }}</p>
             </div>
             <div class="col-xs-0">
 

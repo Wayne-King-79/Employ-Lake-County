@@ -105,7 +105,7 @@ nav {
 .fa-database {
     color: #5bbc2e;
     font-size: 150px !important;
-    opacity: 0.7;
+    opacity: 0.5;
     margin-left: 40%;
 }
 
@@ -118,7 +118,7 @@ nav {
 }
 
 .job-content h2 {
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: 75px;
 }
 
@@ -136,22 +136,24 @@ nav {
     border-radius: 5px;
 }
 
-.pagination>li>a{
-    color: #5bbc2e;
+.pagination li a {
+    background-color: #555 !important;
+    color: #fff !important;
 }
 
-.pagination>li>a:hover {
-    color: #5bbc2e;
+.pagination li a:hover {
+    color: #5bbc2e !important;
+    border-color: #fff !important;
 }
 
-.pagination>.active>a {
-    background-color: #5bbc2e;
+.pagination .active a {
+    background-color: #5bbc2e !important;
     color: #fff;
-    border-color: #5bbc2e;
+    border-color: #fff;
 }
 
-.pagination>.disabled>a {
-    color: #5bbc2e;
+.pagination .active a:hover {
+    color: #fff !important;
 }
 
 table {
@@ -167,7 +169,7 @@ table {
     color: #5bbc2e;
     font-size: 150px !important;
     padding-bottom: 150px;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .contact .btn-primary {
@@ -181,13 +183,21 @@ table {
     color: #5bbc2e;
     font-size: 150px !important;
     padding-bottom: 150px;
-    opacity: 0.7;
+    opacity: 0.5;
+}
+
+.resources-div:before {
+    position: absolute;
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-size: 80px;
+    color: #d8d8d8;
 }
 
 .resources-div {
     background-color: #d8d8d8;
     color: #333;
-    font-weight: bold;
+    font-weight: bolder;
     padding: 10px;
     margin-top: 50px;
     box-shadow: 10px 10px 10px #999;
@@ -195,10 +205,20 @@ table {
     border-radius: 5px;
 }
 
-.resources-div:hover {
-    background-color: #333;
+.res-link {
+    text-decoration: none !important;
 }
 
+.resources-div:hover {
+    background-color: #333;
+    color: #5bbc2e;
+}
+
+.resources-div p {
+    margin-top: 35%;
+}
+
+/*
 .resources-div a:hover {
     color: #fff;
     transition: color 0.5s;
@@ -212,13 +232,13 @@ table {
     font-size: 18px;
     word-break: break-all;
 }
-
+*/
 /******* SUPPORT *******/
 .fa-paypal {
     color: #5bbc2e;
     font-size: 150px !important;
     padding-bottom: 150px;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .donate {
@@ -283,10 +303,8 @@ footer {
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-    .rp {
-        font-size: 20px;
-    }
+@media only screen and (min-width : 375px) {
+    
 }
 
 /* Small Devices, Tablets */
