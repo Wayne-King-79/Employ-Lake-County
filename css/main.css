@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    background-color: #d8d8d8;
+    background-color: #fff;
 }
 
 .angular-container {
@@ -102,13 +102,24 @@ nav {
 }
 
 /******* JOB CONTAINER ********/
+.fa-database {
+    color: #5bbc2e;
+    font-size: 150px !important;
+    opacity: 0.7;
+    margin-left: 40%;
+}
+
 .job-container {
     background-color: #D8D8D8;
 }
 
-.main-content {
-    margin-top: 200px;
-    margin-bottom: 200px;
+.job-content, .resource-content, .contact-content, .sponsor-content {
+    margin-top: 400px;
+}
+
+.job-content h2 {
+    margin-top: 150px;
+    margin-bottom: 75px;
 }
 
 .jinfo {
@@ -118,14 +129,11 @@ nav {
 
 .jp {
     padding: 20px;
-    background-color: #fff;
+    background-color: #d8d8d8;
     color: #333;
     margin-top: 50px;
-    box-shadow: 10px 10px 10px #555;
-}
-
-.fa-database {
-    float: right;
+    box-shadow: 10px 10px 10px #999;
+    border-radius: 5px;
 }
 
 .pagination>li>a{
@@ -151,14 +159,15 @@ table {
 }
 
 /****** CONTACT ******/
-.contact {
-    background-color: #d8d8d8;
-    margin-bottom: 100px;
+.contact-content {
+    margin-bottom: 300px;
 }
 
 .fa-envelope {
-    color: #333;
-    opacity: 0.1;
+    color: #5bbc2e;
+    font-size: 150px !important;
+    padding-bottom: 150px;
+    opacity: 0.7;
 }
 
 .contact .btn-primary {
@@ -168,37 +177,56 @@ table {
 }
 
 /******** RESOURCES ********/
-.resources {
-    /*height: 85vh;*/
-    background-color: #D8D8D8;
-    color: #444;
-}
-
-.rp {
-    word-break: break-all;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    margin-top: 50px;
-    box-shadow: 10px 10px 10px #555;
-}
-
-.rp:hover {
-
-}
-
-.rp a {
-    text-decoration: none;
+.fa-file {
     color: #5bbc2e;
+    font-size: 150px !important;
+    padding-bottom: 150px;
+    opacity: 0.7;
+}
+
+.resources-div {
+    background-color: #d8d8d8;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 50px;
+    box-shadow: 10px 10px 10px #999;
+    min-height: 240px !important;
+    border-radius: 5px;
+}
+
+.resources-div:hover {
+    background-color: #333;
+}
+
+.resources-div a:hover {
+    color: #fff;
+    transition: color 0.5s;
+}
+
+.resources-div a {
+    margin-top: 40px;
+    font-weight: normal !important;
+    color: #5bbc2e;
+    text-decoration: none;
+    font-size: 18px;
+    word-break: break-all;
 }
 
 /******* SUPPORT *******/
+.fa-paypal {
+    color: #5bbc2e;
+    font-size: 150px !important;
+    padding-bottom: 150px;
+    opacity: 0.7;
+}
+
 .donate {
     background-color: #d8d8d8;
     height: 85vh;
 }
 
-.donate p {
+.sponsor-content p {
     font-size: 20px;
     color: #555;
 }
